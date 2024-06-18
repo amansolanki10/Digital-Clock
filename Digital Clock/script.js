@@ -1,12 +1,12 @@
-var hourElement = document.getElementById('hour');
-var minuteElement = document.getElementById('min');
-var secondElement = document.getElementById('sec');
+let hourElement = document.getElementById('hour');
+let minuteElement = document.getElementById('min');
+let secondElement = document.getElementById('sec');
 
 function updateClock() {
-  var now = new Date();
-  var hours = now.getHours().toString().padStart(2, '0');
-  var minutes = now.getMinutes().toString().padStart(2, '0');
-  var seconds = now.getSeconds().toString().padStart(2, '0');
+  let now = new Date();
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+  let seconds = now.getSeconds().toString().padStart(2, '0');
   
   hourElement.textContent = hours;
   minuteElement.textContent = minutes;
@@ -14,5 +14,3 @@ function updateClock() {
 }
 
 setInterval(updateClock, 1000);
-
-
